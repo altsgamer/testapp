@@ -1,0 +1,9 @@
+<table border = "1">
+  <% @notes.each do |note| %>
+    <tr>
+      <td><%= note[:title] %></td>
+      <td><%= note[:opinion] %></td>
+      <td><%= note[:rating] %></td>
+    </tr>
+  <% end %> 
+</table>
