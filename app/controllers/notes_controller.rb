@@ -16,6 +16,10 @@ class NotesController < ApplicationController
         end
     end    
 
+    def edit
+        @notes = Note.all
+    end
+
     def note_params
         params.require(:note).permit(:title, :opinion, :rating)
     end

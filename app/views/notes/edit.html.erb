@@ -4,12 +4,11 @@
       <td width = 150px><%= note[:title] %></td>
       <td width = 150px><%= note[:opinion] %></td>
       <td width = 60px><%= note[:rating] %></td>
+      <td width = 40px><%= link_to 'Edit', '/' %></td>
+      <td width = 40px><%= link_to 'Del', '/' %></td>
     </tr>
   <% end %> 
 </table>
 
 <br>
-<%= link_to 'Add New', new_path %>
-<br>
-<br>
-<%= link_to 'Edit', edit_path %>
+<%= link_to 'Back to List', '/' %>
