@@ -14,10 +14,20 @@ class NotesController < ApplicationController
         else
             render :new 
         end
-    end    
+    end
 
-    def edit
-        @notes = Note.all
+    def show
+        @note = Note.find(params[:id])
+    end
+
+    def destroy
+        @note = Note.find(params[:id])
+        @note.destroy
+        redirect_to '/'
+    end
+
+    def update
+        @note = Note.find(params[:id])
     end
 
     def note_params

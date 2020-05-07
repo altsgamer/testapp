@@ -1,0 +1,23 @@
+<table border = "2">
+    <tr>
+      <td width = 30px> id </td>
+      <td width = 150px> title </td>
+      <td width = 150px> opinion </td>
+      <td width = 60px> rating </td>
+      <td width = 110px> created_at </td>
+      <td width = 110px> updated_at </td>
+    </tr>
+
+    <tr>
+      <td width = 30px><%= @note[:id] %></td>
+      <td width = 150px><%= @note[:title] %></td>
+      <td width = 150px><%= @note[:opinion] %></td>
+      <td width = 60px><%= @note[:rating] %></td>
+      <td width = 110px><%= @note[:created_at] %></td>
+      <td width = 110px><%= @note[:updated_at] %></td>
+    </tr>
+</table>
+
+<br>
+<%= link_to 'Back to list', '/' %>
+<br>
