@@ -1,0 +1,33 @@
+<%= form_with model: @note, local: true do |form| %>
+ 
+  <% if @note.errors.any? %>
+    <div id="error_explanation">
+      <h1>
+        <%= pluralize(@note.errors.count, "error") %> prohibited this article from being saved:
+      </h1>
+      <ul>
+        <% @note.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+   <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+   <p>
+    <%= form.label :opinion %><br>
+    <%= form.text_field :opinion %>
+  </p>
+  <p>
+    <%= form.label :rating %><br>
+    <%= form.number_field :rating, in: 75..100 %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+ 
+<% end %>

@@ -4,8 +4,8 @@
       <td width = 150px><%= note[:title] %></td>
       <td width = 150px><%= note[:opinion] %></td>
       <td width = 60px><%= note[:rating] %></td>
-      <td width = 40px><%= link_to 'Edit', '/' %></td>
-      <td width = 40px><%= link_to 'Del', "/#{note[:id]}",
+      <td width = 40px><%= link_to 'Edit', edit_note_path(note) %></td>
+      <td width = 40px><%= link_to 'Del', note_path(note),
               method: :delete,
               data: { confirm: 'Seriously?!'} %></td>
     </tr>
@@ -13,5 +13,5 @@
 </table>
 
 <br>
-<%= link_to 'Add New', new_path %>
+<%= link_to 'Add New', new_note_path %>
 <br>
